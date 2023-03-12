@@ -4,7 +4,7 @@ namespace MiniaudioSharp;
 
 public partial struct ma_job
 {
-    [NativeTypeName("union (anonymous union at miniaudio/src/miniaudio.h:5965:5)")]
+    [NativeTypeName("union (anonymous union at miniaudio/vendor/miniaudio.h:5965:5)")]
     public _toc_e__Union toc;
 
     [NativeTypeName("ma_uint64")]
@@ -13,14 +13,14 @@ public partial struct ma_job
     [NativeTypeName("ma_uint32")]
     public uint order;
 
-    [NativeTypeName("union (anonymous union at miniaudio/src/miniaudio.h:5978:5)")]
+    [NativeTypeName("union (anonymous union at miniaudio/vendor/miniaudio.h:5978:5)")]
     public _data_e__Union data;
 
     [StructLayout(LayoutKind.Explicit)]
     public partial struct _toc_e__Union
     {
         [FieldOffset(0)]
-        [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:5967:9)")]
+        [NativeTypeName("struct (anonymous struct at miniaudio/vendor/miniaudio.h:5967:9)")]
         public _breakup_e__Struct breakup;
 
         [FieldOffset(0)]
@@ -44,15 +44,15 @@ public partial struct ma_job
     public partial struct _data_e__Union
     {
         [FieldOffset(0)]
-        [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:5981:9)")]
+        [NativeTypeName("struct (anonymous struct at miniaudio/vendor/miniaudio.h:5981:9)")]
         public _custom_e__Struct custom;
 
         [FieldOffset(0)]
-        [NativeTypeName("union (anonymous union at miniaudio/src/miniaudio.h:5989:9)")]
+        [NativeTypeName("union (anonymous union at miniaudio/vendor/miniaudio.h:5989:9)")]
         public _resourceManager_e__Union resourceManager;
 
         [FieldOffset(0)]
-        [NativeTypeName("union (anonymous union at miniaudio/src/miniaudio.h:6067:9)")]
+        [NativeTypeName("union (anonymous union at miniaudio/vendor/miniaudio.h:6067:9)")]
         public _device_e__Union device;
 
         public unsafe partial struct _custom_e__Struct
@@ -71,39 +71,39 @@ public partial struct ma_job
         public partial struct _resourceManager_e__Union
         {
             [FieldOffset(0)]
-            [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:5991:13)")]
+            [NativeTypeName("struct (anonymous struct at miniaudio/vendor/miniaudio.h:5991:13)")]
             public _loadDataBufferNode_e__Struct loadDataBufferNode;
 
             [FieldOffset(0)]
-            [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:6003:13)")]
+            [NativeTypeName("struct (anonymous struct at miniaudio/vendor/miniaudio.h:6003:13)")]
             public _freeDataBufferNode_e__Struct freeDataBufferNode;
 
             [FieldOffset(0)]
-            [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:6010:13)")]
+            [NativeTypeName("struct (anonymous struct at miniaudio/vendor/miniaudio.h:6010:13)")]
             public _pageDataBufferNode_e__Struct pageDataBufferNode;
 
             [FieldOffset(0)]
-            [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:6019:13)")]
+            [NativeTypeName("struct (anonymous struct at miniaudio/vendor/miniaudio.h:6019:13)")]
             public _loadDataBuffer_e__Struct loadDataBuffer;
 
             [FieldOffset(0)]
-            [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:6032:13)")]
+            [NativeTypeName("struct (anonymous struct at miniaudio/vendor/miniaudio.h:6032:13)")]
             public _freeDataBuffer_e__Struct freeDataBuffer;
 
             [FieldOffset(0)]
-            [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:6039:13)")]
+            [NativeTypeName("struct (anonymous struct at miniaudio/vendor/miniaudio.h:6039:13)")]
             public _loadDataStream_e__Struct loadDataStream;
 
             [FieldOffset(0)]
-            [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:6048:13)")]
+            [NativeTypeName("struct (anonymous struct at miniaudio/vendor/miniaudio.h:6048:13)")]
             public _freeDataStream_e__Struct freeDataStream;
 
             [FieldOffset(0)]
-            [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:6054:13)")]
+            [NativeTypeName("struct (anonymous struct at miniaudio/vendor/miniaudio.h:6054:13)")]
             public _pageDataStream_e__Struct pageDataStream;
 
             [FieldOffset(0)]
-            [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:6059:13)")]
+            [NativeTypeName("struct (anonymous struct at miniaudio/vendor/miniaudio.h:6059:13)")]
             public _seekDataStream_e__Struct seekDataStream;
 
             public unsafe partial struct _loadDataBufferNode_e__Struct
@@ -248,14 +248,14 @@ public partial struct ma_job
         public partial struct _device_e__Union
         {
             [FieldOffset(0)]
-            [NativeTypeName("union (anonymous union at miniaudio/src/miniaudio.h:6069:13)")]
+            [NativeTypeName("union (anonymous union at miniaudio/vendor/miniaudio.h:6069:13)")]
             public _aaudio_e__Union aaudio;
 
             [StructLayout(LayoutKind.Explicit)]
             public partial struct _aaudio_e__Union
             {
                 [FieldOffset(0)]
-                [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:6071:17)")]
+                [NativeTypeName("struct (anonymous struct at miniaudio/vendor/miniaudio.h:6071:17)")]
                 public _reroute_e__Struct reroute;
 
                 public unsafe partial struct _reroute_e__Struct

@@ -4,7 +4,7 @@ namespace MiniaudioSharp;
 
 public partial struct ma_resource_manager_data_source
 {
-    [NativeTypeName("union (anonymous union at miniaudio/src/miniaudio.h:10160:5)")]
+    [NativeTypeName("union (anonymous union at miniaudio/vendor/miniaudio.h:10160:5)")]
     public _backend_e__Union backend;
 
     [NativeTypeName("ma_uint32")]

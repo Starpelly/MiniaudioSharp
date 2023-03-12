@@ -15,10 +15,13 @@ project "miniaudio"
     files
     {
         "miniaudio/src/*.h",
-        "miniaudio/src/*.c"
+        "miniaudio/src/*.c",
+        "miniaudio/vendor/*.h",
+        "miniaudio/vendor/*.c",
     }
 
     includedirs
     {
-        "miniaudio/src"
+        "miniaudio/src",
+        "miniaudio/vendor"
     }

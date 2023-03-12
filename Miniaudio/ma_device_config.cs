@@ -43,28 +43,28 @@ public unsafe partial struct ma_device_config
 
     public ma_resampler_config resampling;
 
-    [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:6646:5)")]
+    [NativeTypeName("struct (anonymous struct at miniaudio/vendor/miniaudio.h:6646:5)")]
     public _playback_e__Struct playback;
 
-    [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:6656:5)")]
+    [NativeTypeName("struct (anonymous struct at miniaudio/vendor/miniaudio.h:6656:5)")]
     public _capture_e__Struct capture;
 
-    [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:6667:5)")]
+    [NativeTypeName("struct (anonymous struct at miniaudio/vendor/miniaudio.h:6667:5)")]
     public _wasapi_e__Struct wasapi;
 
-    [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:6677:5)")]
+    [NativeTypeName("struct (anonymous struct at miniaudio/vendor/miniaudio.h:6677:5)")]
     public _alsa_e__Struct alsa;
 
-    [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:6684:5)")]
+    [NativeTypeName("struct (anonymous struct at miniaudio/vendor/miniaudio.h:6684:5)")]
     public _pulse_e__Struct pulse;
 
-    [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:6689:5)")]
+    [NativeTypeName("struct (anonymous struct at miniaudio/vendor/miniaudio.h:6689:5)")]
     public _coreaudio_e__Struct coreaudio;
 
-    [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:6693:5)")]
+    [NativeTypeName("struct (anonymous struct at miniaudio/vendor/miniaudio.h:6693:5)")]
     public _opensl_e__Struct opensl;
 
-    [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:6698:5)")]
+    [NativeTypeName("struct (anonymous struct at miniaudio/vendor/miniaudio.h:6698:5)")]
     public _aaudio_e__Struct aaudio;
 
     public unsafe partial struct _playback_e__Struct

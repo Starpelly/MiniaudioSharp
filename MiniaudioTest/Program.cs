@@ -1,6 +1,7 @@
-﻿using MiniaudioSharp;
-using System.Runtime.InteropServices;
+﻿using System.Runtime.InteropServices;
 using System.Text;
+
+using MiniaudioSharp;
 
 namespace MiniaudioTest
 {
@@ -33,7 +34,7 @@ namespace MiniaudioTest
             deviceConfig.playback.format = decoder.outputFormat;
             deviceConfig.playback.channels = decoder.outputChannels;
             deviceConfig.sampleRate = decoder.outputSampleRate;
-            deviceConfig.dataCallback = (void*)DataCallback;
+            deviceConfig.dataCallback = DataCallback;
             deviceConfig.pUserData = &decoder;
 
             Console.ReadLine();

@@ -33,7 +33,7 @@ public unsafe partial struct ma_resource_manager_data_buffer
     [NativeTypeName("ma_bool32")]
     public uint isConnectorInitialized;
 
-    [NativeTypeName("union (anonymous union at miniaudio/src/miniaudio.h:10122:5)")]
+    [NativeTypeName("union (anonymous union at miniaudio/vendor/miniaudio.h:10122:5)")]
     public _connector_e__Union connector;
 
     [StructLayout(LayoutKind.Explicit)]
