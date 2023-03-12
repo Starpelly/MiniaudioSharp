@@ -401,7 +401,7 @@ FodyWeavers.xsd
 **/bin/
 **/bin-int/
 
-./Gen/*.sln
-./Gen/*.vcxproj
-./Gen/*.vcxproj.filters
-./Gen/*.vcxproj.user
+/Gen/*.sln
+**.vcxproj
+**.vcxproj.filters
+**.vcxproj.user

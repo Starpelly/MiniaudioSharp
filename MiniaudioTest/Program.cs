@@ -25,7 +25,9 @@ namespace MiniaudioTest
                     Console.WriteLine("could not load file");
                     return;
                 }
+                Console.WriteLine("Successfully initialized file!");
             }
+            Console.ReadLine();
         }
     }
 }
