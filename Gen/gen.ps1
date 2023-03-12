@@ -5,4 +5,6 @@ ClangSharpPInvokeGenerator `
     -n MiniaudioSharp <# namespace of the bindings #> `
     --methodClassName Miniaudio <# class name where to put methods #> `
     --libraryPath miniaudio <# name of the DLL #> `
-    -o ..\Miniaudio <# output folder #>
+    -o ..\MiniaudioSharp <# output folder #>
+
+Pause

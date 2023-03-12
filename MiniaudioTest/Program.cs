@@ -10,39 +10,27 @@ namespace MiniaudioTest
         static unsafe void Main(string[] args)
         {
             ma_result result;
-            ma_decoder decoder;
+            ma_engine engine;
 
-            var file = @"C:\Users\Braedon\Music\Greippi - Krem Kaakkuja (Second Flight Remix).wav";
+            result = Miniaudio.ma_engine_init(null, &engine);
+            if (result != ma_result.MA_SUCCESS)
+            {
+                throw new Exception("Failed to initialize audio engine.");
+            }
+
+            var file = @"Resources/mudstep_atomicbeats_old.wav";
             var bytes = Encoding.ASCII.GetBytes(file);
             fixed (byte* buffer = bytes)
             {
                 sbyte* sp = (sbyte*)buffer;
-
-                result = Miniaudio.ma_decoder_init_file(sp, null, &decoder);
-                Miniaudio.ma_decoder_uninit(&decoder);
-
-                if (result != ma_result.MA_SUCCESS)
-                {
-                    Console.WriteLine("could not load file");
-                    return;
-                }
-
-                Console.WriteLine("Successfully initialized file!");
+                Miniaudio.ma_engine_play_sound(&engine, sp, null);
             }
 
-            var deviceConfig = Miniaudio.ma_device_config_init(ma_device_type.ma_device_type_playback);
-            deviceConfig.playback.format = decoder.outputFormat;
-            deviceConfig.playback.channels = decoder.outputChannels;
-            deviceConfig.sampleRate = decoder.outputSampleRate;
-            deviceConfig.dataCallback = DataCallback;
-            deviceConfig.pUserData = &decoder;
 
+            Console.WriteLine("Press enter to quit...");
             Console.ReadLine();
-        }
 
-        public static void DataCallback()
-        {
-
+            Miniaudio.ma_engine_uninit(&engine);
         }
     }
 }

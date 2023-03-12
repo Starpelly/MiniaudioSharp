@@ -9,7 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Miniaudio\Miniaudio.csproj" />
+    <ProjectReference Include="..\MiniaudioSharp\MiniaudioSharp.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\mudstep_atomicbeats_old.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
