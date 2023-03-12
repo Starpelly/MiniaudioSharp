@@ -3,12 +3,6 @@ Auto generated C# bindings for miniaudio
 
 MiniaudioSharp targets net6.0
 
-## Installation - NuGet
-This is the prefered method to get started - The package is still new so please report any [issues](https://github.com/Starpelly/MiniaudioSharp/issues).
-```
-dotnet add package MiniaudioSharp --version 1.0.1
-```
-
 ## Example
 ```cs
 using System.Runtime.InteropServices;
