@@ -57,7 +57,7 @@ public unsafe partial struct ma_device_id
     public fixed sbyte webaudio[32];
 
     [FieldOffset(0)]
-    [NativeTypeName("union (anonymous union at include/miniaudio.h:6592:5)")]
+    [NativeTypeName("union (anonymous union at miniaudio/src/miniaudio.h:6592:5)")]
     public _custom_e__Union custom;
 
     [FieldOffset(0)]

@@ -51,18 +51,18 @@ public unsafe partial struct ma_decoder
 
     public ma_allocation_callbacks allocationCallbacks;
 
-    [NativeTypeName("union (anonymous union at include/miniaudio.h:9709:5)")]
+    [NativeTypeName("union (anonymous union at miniaudio/src/miniaudio.h:9709:5)")]
     public _data_e__Union data;
 
     [StructLayout(LayoutKind.Explicit)]
     public partial struct _data_e__Union
     {
         [FieldOffset(0)]
-        [NativeTypeName("struct (anonymous struct at include/miniaudio.h:9711:9)")]
+        [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:9711:9)")]
         public _vfs_e__Struct vfs;
 
         [FieldOffset(0)]
-        [NativeTypeName("struct (anonymous struct at include/miniaudio.h:9716:9)")]
+        [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:9716:9)")]
         public _memory_e__Struct memory;
 
         public unsafe partial struct _vfs_e__Struct

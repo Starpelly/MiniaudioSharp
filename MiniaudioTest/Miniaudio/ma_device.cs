@@ -60,16 +60,16 @@ public unsafe partial struct ma_device
 
     public ma_duplex_rb duplexRB;
 
-    [NativeTypeName("struct (anonymous struct at include/miniaudio.h:7331:5)")]
+    [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:7331:5)")]
     public _resampling_e__Struct resampling;
 
-    [NativeTypeName("struct (anonymous struct at include/miniaudio.h:7341:5)")]
+    [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:7341:5)")]
     public _playback_e__Struct playback;
 
-    [NativeTypeName("struct (anonymous struct at include/miniaudio.h:7367:5)")]
+    [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:7367:5)")]
     public _capture_e__Struct capture;
 
-    [NativeTypeName("ma_device::(anonymous union at include/miniaudio.h:7390:5)")]
+    [NativeTypeName("ma_device::(anonymous union at miniaudio/src/miniaudio.h:7390:5)")]
     public _Anonymous_e__Union Anonymous;
 
     public ref _Anonymous_e__Union._wasapi_e__Struct wasapi
@@ -120,7 +120,7 @@ public unsafe partial struct ma_device
 
         public void* pBackendUserData;
 
-        [NativeTypeName("struct (anonymous struct at include/miniaudio.h:7336:9)")]
+        [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:7336:9)")]
         public _linear_e__Struct linear;
 
         public partial struct _linear_e__Struct
@@ -249,23 +249,23 @@ public unsafe partial struct ma_device
     public partial struct _Anonymous_e__Union
     {
         [FieldOffset(0)]
-        [NativeTypeName("struct (anonymous struct at include/miniaudio.h:7393:9)")]
+        [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:7393:9)")]
         public _wasapi_e__Struct wasapi;
 
         [FieldOffset(0)]
-        [NativeTypeName("struct (anonymous struct at include/miniaudio.h:7433:9)")]
+        [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:7433:9)")]
         public _dsound_e__Struct dsound;
 
         [FieldOffset(0)]
-        [NativeTypeName("struct (anonymous struct at include/miniaudio.h:7443:9)")]
+        [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:7443:9)")]
         public _winmm_e__Struct winmm;
 
         [FieldOffset(0)]
-        [NativeTypeName("struct (anonymous struct at include/miniaudio.h:7486:9)")]
+        [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:7486:9)")]
         public _jack_e__Struct jack;
 
         [FieldOffset(0)]
-        [NativeTypeName("struct (anonymous struct at include/miniaudio.h:7577:9)")]
+        [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:7577:9)")]
         public _null_device_e__Struct null_device;
 
         public unsafe partial struct _wasapi_e__Struct

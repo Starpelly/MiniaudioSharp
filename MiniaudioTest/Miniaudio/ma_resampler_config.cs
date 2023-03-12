@@ -19,7 +19,7 @@ public unsafe partial struct ma_resampler_config
 
     public void* pBackendUserData;
 
-    [NativeTypeName("struct (anonymous struct at include/miniaudio.h:5162:5)")]
+    [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:5162:5)")]
     public _linear_e__Struct linear;
 
     public partial struct _linear_e__Struct

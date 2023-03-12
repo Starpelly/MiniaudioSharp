@@ -16,7 +16,7 @@ public unsafe partial struct ma_device_info
     [NativeTypeName("ma_uint32")]
     public uint nativeDataFormatCount;
 
-    [NativeTypeName("struct (anonymous struct at include/miniaudio.h:6620:5) [64]")]
+    [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:6620:5) [64]")]
     public _nativeDataFormats_e__FixedBuffer nativeDataFormats;
 
     public partial struct _Anonymous_e__Struct

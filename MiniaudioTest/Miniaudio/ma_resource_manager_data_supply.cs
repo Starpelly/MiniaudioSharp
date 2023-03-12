@@ -6,22 +6,22 @@ public partial struct ma_resource_manager_data_supply
 {
     public ma_resource_manager_data_supply_type type;
 
-    [NativeTypeName("union (anonymous union at include/miniaudio.h:10070:5)")]
+    [NativeTypeName("union (anonymous union at miniaudio/src/miniaudio.h:10070:5)")]
     public _backend_e__Union backend;
 
     [StructLayout(LayoutKind.Explicit)]
     public partial struct _backend_e__Union
     {
         [FieldOffset(0)]
-        [NativeTypeName("struct (anonymous struct at include/miniaudio.h:10072:9)")]
+        [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:10072:9)")]
         public _encoded_e__Struct encoded;
 
         [FieldOffset(0)]
-        [NativeTypeName("struct (anonymous struct at include/miniaudio.h:10077:9)")]
+        [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:10077:9)")]
         public _decoded_e__Struct decoded;
 
         [FieldOffset(0)]
-        [NativeTypeName("struct (anonymous struct at include/miniaudio.h:10086:9)")]
+        [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:10086:9)")]
         public _decodedPaged_e__Struct decodedPaged;
 
         public unsafe partial struct _encoded_e__Struct

@@ -25,7 +25,7 @@ public unsafe partial struct ma_channel_converter
     [NativeTypeName("ma_uint8 *")]
     public byte* pShuffleTable;
 
-    [NativeTypeName("union (anonymous union at include/miniaudio.h:5317:5)")]
+    [NativeTypeName("union (anonymous union at miniaudio/src/miniaudio.h:5317:5)")]
     public _weights_e__Union weights;
 
     public void* _pHeap;

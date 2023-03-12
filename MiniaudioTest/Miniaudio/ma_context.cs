@@ -39,10 +39,10 @@ public unsafe partial struct ma_context
 
     public ma_device_info* pDeviceInfos;
 
-    [NativeTypeName("ma_context::(anonymous union at include/miniaudio.h:6907:5)")]
+    [NativeTypeName("ma_context::(anonymous union at miniaudio/src/miniaudio.h:6907:5)")]
     public _Anonymous1_e__Union Anonymous1;
 
-    [NativeTypeName("ma_context::(anonymous union at include/miniaudio.h:7260:5)")]
+    [NativeTypeName("ma_context::(anonymous union at miniaudio/src/miniaudio.h:7260:5)")]
     public _Anonymous2_e__Union Anonymous2;
 
     public ref _Anonymous1_e__Union._wasapi_e__Struct wasapi
@@ -105,23 +105,23 @@ public unsafe partial struct ma_context
     public partial struct _Anonymous1_e__Union
     {
         [FieldOffset(0)]
-        [NativeTypeName("struct (anonymous struct at include/miniaudio.h:6910:9)")]
+        [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:6910:9)")]
         public _wasapi_e__Struct wasapi;
 
         [FieldOffset(0)]
-        [NativeTypeName("struct (anonymous struct at include/miniaudio.h:6926:9)")]
+        [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:6926:9)")]
         public _dsound_e__Struct dsound;
 
         [FieldOffset(0)]
-        [NativeTypeName("struct (anonymous struct at include/miniaudio.h:6936:9)")]
+        [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:6936:9)")]
         public _winmm_e__Struct winmm;
 
         [FieldOffset(0)]
-        [NativeTypeName("struct (anonymous struct at include/miniaudio.h:7106:9)")]
+        [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:7106:9)")]
         public _jack_e__Struct jack;
 
         [FieldOffset(0)]
-        [NativeTypeName("struct (anonymous struct at include/miniaudio.h:7253:9)")]
+        [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:7253:9)")]
         public _null_backend_e__Struct null_backend;
 
         public unsafe partial struct _wasapi_e__Struct
@@ -323,7 +323,7 @@ public unsafe partial struct ma_context
     public partial struct _Anonymous2_e__Union
     {
         [FieldOffset(0)]
-        [NativeTypeName("struct (anonymous struct at include/miniaudio.h:7263:9)")]
+        [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:7263:9)")]
         public _win32_e__Struct win32;
 
         [FieldOffset(0)]

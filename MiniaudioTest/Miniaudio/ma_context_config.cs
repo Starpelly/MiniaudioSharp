@@ -13,16 +13,16 @@ public unsafe partial struct ma_context_config
 
     public ma_allocation_callbacks allocationCallbacks;
 
-    [NativeTypeName("struct (anonymous struct at include/miniaudio.h:6839:5)")]
+    [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:6839:5)")]
     public _alsa_e__Struct alsa;
 
-    [NativeTypeName("struct (anonymous struct at include/miniaudio.h:6843:5)")]
+    [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:6843:5)")]
     public _pulse_e__Struct pulse;
 
-    [NativeTypeName("struct (anonymous struct at include/miniaudio.h:6849:5)")]
+    [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:6849:5)")]
     public _coreaudio_e__Struct coreaudio;
 
-    [NativeTypeName("struct (anonymous struct at include/miniaudio.h:6856:5)")]
+    [NativeTypeName("struct (anonymous struct at miniaudio/src/miniaudio.h:6856:5)")]
     public _jack_e__Struct jack;
 
     public ma_backend_callbacks custom;

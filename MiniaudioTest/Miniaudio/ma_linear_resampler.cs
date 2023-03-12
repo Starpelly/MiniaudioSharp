@@ -18,10 +18,10 @@ public unsafe partial struct ma_linear_resampler
     [NativeTypeName("ma_uint32")]
     public uint inTimeFrac;
 
-    [NativeTypeName("union (anonymous union at include/miniaudio.h:5099:5)")]
+    [NativeTypeName("union (anonymous union at miniaudio/src/miniaudio.h:5099:5)")]
     public _x0_e__Union x0;
 
-    [NativeTypeName("union (anonymous union at include/miniaudio.h:5104:5)")]
+    [NativeTypeName("union (anonymous union at miniaudio/src/miniaudio.h:5104:5)")]
     public _x1_e__Union x1;
 
     public ma_lpf lpf;

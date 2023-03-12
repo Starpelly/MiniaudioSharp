@@ -22,7 +22,7 @@ public unsafe partial struct ma_resampler
     [NativeTypeName("ma_uint32")]
     public uint sampleRateOut;
 
-    [NativeTypeName("union (anonymous union at include/miniaudio.h:5179:5)")]
+    [NativeTypeName("union (anonymous union at miniaudio/src/miniaudio.h:5179:5)")]
     public _state_e__Union state;
 
     public void* _pHeap;
