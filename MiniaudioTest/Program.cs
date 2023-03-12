@@ -7,7 +7,7 @@ namespace MiniaudioTest
 {
     internal unsafe class Program
     {
-        static unsafe void Main(string[] args)
+        public static unsafe void Main(string[] args)
         {
             ma_result result;
             ma_engine engine;
@@ -18,14 +18,13 @@ namespace MiniaudioTest
                 throw new Exception("Failed to initialize audio engine.");
             }
 
-            var file = @"Resources/mudstep_atomicbeats_old.wav";
+            var file = args[0];
             var bytes = Encoding.ASCII.GetBytes(file);
             fixed (byte* buffer = bytes)
             {
                 sbyte* sp = (sbyte*)buffer;
                 Miniaudio.ma_engine_play_sound(&engine, sp, null);
             }
-
 
             Console.WriteLine("Press enter to quit...");
             Console.ReadLine();
