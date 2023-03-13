@@ -1,5 +1,5 @@
 ClangSharpPInvokeGenerator `
-    -c multi-file generate-file-scoped-namespaces generate-helper-types <# configuration for the generator#> `
+    -c multi-file generate-helper-types <# configuration for the generator#> `
     --file miniaudio\vendor\miniaudio.h <# file we want to generate bindings for #>  `
     --traverse miniaudio\vendor\miniaudio.h `
     -n MiniaudioSharp <# namespace of the bindings #> `

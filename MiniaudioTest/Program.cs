@@ -18,7 +18,7 @@ namespace MiniaudioTest
                 throw new Exception("Failed to initialize audio engine.");
             }
 
-            var file = args[0];
+            var file = @"Resources/mudstep_atomicbeats_old.wav";
             var bytes = Encoding.ASCII.GetBytes(file);
             fixed (byte* buffer = bytes)
             {
