@@ -11,6 +11,7 @@ namespace MiniaudioTest
         {
             ma_result result;
             ma_engine engine;
+            ma_engine* e = &engine;
 
             result = Miniaudio.ma_engine_init(null, &engine);
             if (result != ma_result.MA_SUCCESS)
@@ -23,8 +24,11 @@ namespace MiniaudioTest
             fixed (byte* buffer = bytes)
             {
                 sbyte* sp = (sbyte*)buffer;
-                Miniaudio.ma_engine_play_sound(&engine, sp, null);
+                Miniaudio.ma_engine_play_sound(e, sp, null);
             }
+
+            var d = Miniaudio.ma_device_config_init(ma_device_type.ma_device_type_playback);
+            d.dataCallback = Marshal.GetDelegateForFunctionPointer()
 
             Console.WriteLine("Press enter to quit...");
             Console.ReadLine();
