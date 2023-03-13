@@ -7,33 +7,60 @@ namespace MiniaudioTest
 {
     internal unsafe class Program
     {
+        public delegate void dataCallback(ma_device* pDevice, void* pOutput, void* pInput, uint frameCount);
+
         public static unsafe void Main(string[] args)
         {
             ma_result result;
-            ma_engine engine;
-            ma_engine* e = &engine;
-
-            result = Miniaudio.ma_engine_init(null, &engine);
-            if (result != ma_result.MA_SUCCESS)
-            {
-                throw new Exception("Failed to initialize audio engine.");
-            }
+            ma_decoder decoder;
+            ma_device_config deviceConfig;
+            ma_device device;
 
             var file = @"Resources/mudstep_atomicbeats_old.wav";
             var bytes = Encoding.ASCII.GetBytes(file);
             fixed (byte* buffer = bytes)
             {
                 sbyte* sp = (sbyte*)buffer;
-                Miniaudio.ma_engine_play_sound(e, sp, null);
+                result =  Miniaudio.ma_decoder_init_file(sp, null, &decoder);
             }
 
-            var d = Miniaudio.ma_device_config_init(ma_device_type.ma_device_type_playback);
-            d.dataCallback = Marshal.GetDelegateForFunctionPointer()
+
+            deviceConfig = Miniaudio.ma_device_config_init(ma_device_type.ma_device_type_playback);
+            deviceConfig.playback.format = decoder.outputFormat;
+            deviceConfig.playback.channels = decoder.outputChannels;
+            deviceConfig.sampleRate = decoder.outputSampleRate;
+            deviceConfig.dataCallback = Marshal.GetFunctionPointerForDelegate<dataCallback>(new dataCallback(DataCallback)); ;
+            deviceConfig.pUserData = &decoder;
+
+            if (Miniaudio.ma_device_init(null, &deviceConfig, &device) != ma_result.MA_SUCCESS)
+            {
+                Console.WriteLine("Failed to open playback device.\n");
+                Miniaudio.ma_decoder_uninit(&decoder);
+                return;
+            }
+
+            if (Miniaudio.ma_device_start(&device) != ma_result.MA_SUCCESS)
+            {
+                Console.WriteLine("Failed to start playback device.\n");
+                Miniaudio.ma_device_uninit(&device);
+                Miniaudio.ma_decoder_uninit(&decoder);
+                return;
+            }
 
             Console.WriteLine("Press enter to quit...");
             Console.ReadLine();
 
-            Miniaudio.ma_engine_uninit(&engine);
+            Miniaudio.ma_device_uninit(&device);
+            Miniaudio.ma_decoder_uninit(&decoder);
+        }
+
+        static void DataCallback(ma_device* pDevice, void* pOutput, void* pInput, uint frameCount)
+        {
+            ma_decoder* pDecoder = (ma_decoder*)pDevice->pUserData;
+            if (pDecoder == null)
+                return;
+
+            Miniaudio.ma_decoder_read_pcm_frames(pDecoder, pOutput, frameCount, null);
         }
     }
 }
