@@ -10,7 +10,7 @@
 	<PropertyGroup>
 		<PackageId>MiniaudioSharp</PackageId>
 		<PackageTags>miniaudio;gamedev;binding;audio;</PackageTags>
-		<Version>1.0.1</Version>
+		<Version>1.0.2</Version>
 		<Authors>Starpelly</Authors>
 		<Description>
 			Auto generated C# bindings for miniaudio by mackron.

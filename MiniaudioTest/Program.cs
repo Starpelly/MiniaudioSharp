@@ -5,7 +5,7 @@ using MiniaudioSharp;
 
 namespace MiniaudioTest
 {
-    internal unsafe class Program
+    public unsafe class Program
     {
         public delegate void dataCallback(ma_device* pDevice, void* pOutput, void* pInput, uint frameCount);
 
@@ -15,6 +15,7 @@ namespace MiniaudioTest
             ma_decoder decoder;
             ma_device_config deviceConfig;
             ma_device device;
+
 
             var file = @"Resources/mudstep_atomicbeats_old.wav";
             var bytes = Encoding.ASCII.GetBytes(file);
@@ -29,7 +30,7 @@ namespace MiniaudioTest
             deviceConfig.playback.format = decoder.outputFormat;
             deviceConfig.playback.channels = decoder.outputChannels;
             deviceConfig.sampleRate = decoder.outputSampleRate;
-            deviceConfig.dataCallback = Marshal.GetFunctionPointerForDelegate<dataCallback>(new dataCallback(DataCallback)); ;
+            deviceConfig.dataCallback = Marshal.GetFunctionPointerForDelegate<dataCallback>(new dataCallback(DataCallback));
             deviceConfig.pUserData = &decoder;
 
             if (Miniaudio.ma_device_init(null, &deviceConfig, &device) != ma_result.MA_SUCCESS)
@@ -50,8 +51,13 @@ namespace MiniaudioTest
             Console.WriteLine("Press enter to quit...");
             Console.ReadLine();
 
-            Miniaudio.ma_device_uninit(&device);
-            Miniaudio.ma_decoder_uninit(&decoder);
+            Deinit(&device, &decoder);
+        }
+
+        static void Deinit(ma_device* device, ma_decoder* decoder)
+        {
+            Miniaudio.ma_device_uninit(device);
+            Miniaudio.ma_decoder_uninit(decoder);
         }
 
         static void DataCallback(ma_device* pDevice, void* pOutput, void* pInput, uint frameCount)
